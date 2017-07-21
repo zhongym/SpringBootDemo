@@ -6,6 +6,8 @@ import com.example.SpringBootDemo.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Created by zhong on 2017/7/20.
  */
@@ -17,7 +19,7 @@ public class AreaController {
     private AreaService areaService;
 
     @GetMapping("/{areaId}")
-    public Area getArea(@PathVariable("areaId") Long areaId) {
+    public Area getArea(HttpServletRequest request, @PathVariable("areaId") Long areaId) {
         return areaService.getArea(areaId);
     }
 

@@ -15,10 +15,10 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 @SpringBootApplication
 public class SpringBootDemoApplication {
-	@Bean
-	public PlatformTransactionManager txManager(@Qualifier("dataSource") DataSource dataSource) {
-		return new DataSourceTransactionManager(dataSource);
-	}
+//	@Bean
+//	public PlatformTransactionManager txManager(DataSource dataSource) {
+//		return new DataSourceTransactionManager(dataSource);
+//	}
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDemoApplication.class, args);
 	}

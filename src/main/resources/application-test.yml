@@ -1,0 +1,21 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/springboot
+    driverClassName: com.mysql.jdbc.Driver
+    hikari: #数据库连接池配置信息
+      connection-timeout: 60000
+      minimum-idle: 2
+      maximum-pool-size: 2
+      idle-timeout: 6000
+      max-lifetime: 6000
+      connection-test-query: select 1
+      validation-timeout: 10000
+
+#指定日志配置文件 - 根据不同环境加载不同日志配置文件
+logging:
+  level: debug
