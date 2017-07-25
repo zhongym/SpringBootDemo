@@ -20,6 +20,7 @@ public class AreaController {
 
     @GetMapping("/{areaId}")
     public Area getArea(HttpServletRequest request, @PathVariable("areaId") Long areaId) {
+        System.out.println(areaId+"---->");
         return areaService.getArea(areaId);
     }
 

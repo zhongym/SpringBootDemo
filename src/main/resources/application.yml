@@ -2,10 +2,20 @@ mybatis:
   mapperLocations: classpath:mapper/*.xml
   typeAliasesPackage: com.example.SpringBootDemo.domain
 
-#指定日志配置文件 - 根据不同环境加载不同日志配置文件
+spring:
+  datasource:
+    hikari: #鏁版嵁搴撹繛鎺ユ睜閰嶇疆淇℃伅
+      connection-timeout: 60000
+      minimum-idle: 2
+      maximum-pool-size: 2
+      idle-timeout: 6000
+      max-lifetime: 6000
+      connection-test-query: select 1
+      validation-timeout: 10000
+
 logging:
-  config:
-    classpath: logback-spring.xml
+  root:
+    level: INFO
 
 management:
   security:

@@ -18,4 +18,7 @@ spring:
 
 #指定日志配置文件 - 根据不同环境加载不同日志配置文件
 logging:
-  level: debug
+  root:
+    level: DEBUG
+  level:
+    com.laimi: trace
