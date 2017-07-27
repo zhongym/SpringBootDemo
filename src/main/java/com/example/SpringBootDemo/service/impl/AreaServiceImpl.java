@@ -17,7 +17,7 @@ public class AreaServiceImpl implements AreaService {
 
     @Override
     public Area getArea(Long aeraId) {
-        return areaMapper.selectByPrimaryKey(aeraId);
+        return areaMapper.getById(aeraId);
     }
 
     @Override
