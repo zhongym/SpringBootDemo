@@ -9,6 +9,8 @@ public interface AreaService {
 
     Area getArea(Long aeraId);
 
+    void sava(Area area)throws Exception;
+
     void save(Area area) throws Exception;
 
 }

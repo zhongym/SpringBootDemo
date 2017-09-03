@@ -21,8 +21,14 @@ public class AreaServiceImpl implements AreaService {
     }
 
     @Override
+    public void sava(Area area)throws Exception{
+        save(area);
+    }
+
+    @Override
     @Transactional
     public void save(Area area) throws Exception {
         areaMapper.insertSelective(area);
+        throw new RuntimeException("");
     }
 }

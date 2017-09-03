@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     username: root
-    password: 123456
+    password: root
     url: jdbc:mysql://localhost:3306/springboot?characterEncoding=utf8&useSSL=true
     driverClassName: com.mysql.jdbc.Driver
     hikari: #数据库连接池配置信息
