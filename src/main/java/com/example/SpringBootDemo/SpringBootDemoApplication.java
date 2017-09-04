@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 @MapperScan("com.example.SpringBootDemo.dao")
-@EnableTransactionManagement(proxyTargetClass = false,mode = AdviceMode.ASPECTJ)
+@EnableTransactionManagement(proxyTargetClass = true,mode = AdviceMode.ASPECTJ)
 @SpringBootApplication
 @PropertySource("")
 @EnableLoadTimeWeaving
@@ -24,10 +24,6 @@ public class SpringBootDemoApplication {
 
     public static void main(String[] args) {
         SpringApplication springApplication = new SpringApplication(SpringBootDemoApplication.class);
-//        springApplication.setWebEnvironment(true);
-//        springApplication.setApplicationContextClass();
-//        springApplication.addListeners(new ApplicationReadyEventListener());
-        springApplication.setAddCommandLineProperties(true);
         springApplication.run(args);
     }
 

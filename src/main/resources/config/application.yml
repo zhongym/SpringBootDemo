@@ -21,3 +21,5 @@ logging:
 management:
   security:
     enabled: false
+
+
