@@ -29,7 +29,4 @@ public interface AreaMapper {
 
     int updateByPrimaryKey(Area record);
 
-    default Area getById(Long areaId) {
-        return this.selectByPrimaryKey(areaId);
-    }
 }
